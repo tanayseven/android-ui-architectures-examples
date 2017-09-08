@@ -8,6 +8,6 @@ The examples that are covered in the single application cover the UI architectur
 Repositories
 ------------
 
-[The link to the server](android-ui-architectures-examples/server/)
+[The link to the server](server/)
 
-[The link to the android app](android-ui-architectures-examples/android-app/)
+[The link to the android app](android-app/)
