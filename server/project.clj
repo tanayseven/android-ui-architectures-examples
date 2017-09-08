@@ -1,6 +1,6 @@
 (defproject server "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "REST API to serve to a client app"
+  :url "https://tanayseven.com"
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [compojure "1.5.1"]
