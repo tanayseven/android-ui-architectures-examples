@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.tanayseven.uiarchitectures.home.HomeFragment;
 import com.tanayseven.uiarchitectures.rxWeather.RxWeatherFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,11 +17,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadHomeFragment() {
-        RxWeatherFragment weatherRxFragment = new RxWeatherFragment();
-        this.switchFragment(weatherRxFragment, RxWeatherFragment.TAG);
+        HomeFragment homeFragment = new HomeFragment();
+        this.switchFragment(homeFragment, HomeFragment.TAG);
     }
 
     public void switchFragment(Fragment fragment, String tag) {
-        getFragmentManager().beginTransaction().replace(R.id.main_activity_container, fragment, tag);
+        getFragmentManager().beginTransaction().replace(R.id.main_activity_container, fragment, tag).commit();
     }
 }
