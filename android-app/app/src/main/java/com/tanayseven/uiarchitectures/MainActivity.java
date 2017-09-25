@@ -1,11 +1,10 @@
 package com.tanayseven.uiarchitectures;
 
 import android.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.tanayseven.uiarchitectures.home.HomeFragment;
-import com.tanayseven.uiarchitectures.rxWeather.RxWeatherFragment;
 
 public class MainActivity extends AppCompatActivity {
 

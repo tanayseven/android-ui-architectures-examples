@@ -10,7 +10,7 @@ import android.widget.Button;
 
 import com.tanayseven.uiarchitectures.MainActivity;
 import com.tanayseven.uiarchitectures.R;
-import com.tanayseven.uiarchitectures.rxWeather.RxWeatherFragment;
+import com.tanayseven.uiarchitectures.ipLocationPresenterFirst.IPLocationFragment;
 
 /**
  * Created by tanay on 12/9/17.
@@ -19,7 +19,7 @@ import com.tanayseven.uiarchitectures.rxWeather.RxWeatherFragment;
 public class HomeFragment extends Fragment {
     public static final String TAG = HomeFragment.class.getSimpleName();
 
-    private Button rxWeatherButton;
+    private Button ipLocationButton;
 
     @Nullable
     @Override
@@ -33,20 +33,17 @@ public class HomeFragment extends Fragment {
     }
 
     private void bindViews(View contentView) {
-        rxWeatherButton = (Button) contentView.findViewById(R.id.rx_java_weather_example);
+        ipLocationButton = (Button) contentView.findViewById(R.id.ip_location);
     }
 
     private void initViews() {
-        rxWeatherButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goToRxWeatherFragment();
-            }
+        ipLocationButton.setOnClickListener(v -> {
+            goToIpLocationFragment();
         });
     }
 
-    private void goToRxWeatherFragment() {
-        RxWeatherFragment rxWeatherFragment = new RxWeatherFragment();
-        ((MainActivity)getActivity()).switchFragment(rxWeatherFragment, RxWeatherFragment.TAG);
+    private void goToIpLocationFragment() {
+        IPLocationFragment ipLocationFragment = new IPLocationFragment();
+        ((MainActivity) getActivity()).switchFragment(ipLocationFragment, IPLocationFragment.TAG);
     }
 }
